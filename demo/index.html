@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<style>
+    body {
+        margin: 1;
+        padding: 0;
+    }
+    textarea {
+        width: 99%;
+        height: 100vh;
+        background: #f8f8f8;
+    }
+    button {
+        position: fixed;
+        top:3px;
+        right: 3px;
+        padding: 5px;
+        cursor: pointer;
+        /* border-radius: 5px; */
+    }
+</style>
+
+<body>
+    <div>
+        <button id="pdf">export to PDF</button>
+    </div>
+    <div style="text-align: center;">
+        <textarea name="" id=""></textarea>
+    </div>
+
+    <script src="entry.js" type="module"></script>
+</body>
+<script>
+/*
+    # 源码介绍
+## 源码介绍2
+### 源码介绍3
+#### 源码介绍4
+##### 源码介绍5
+###### 源码介绍6
+####### 源码介绍7
+
+[https://github.com/slab/quill](https://github.com/slab/quill)
+
+## 特点
+
+1. 原生js实现
+2. 代码比较干净
+3. 迭代快，模块新
+4. 符合金山办公业务场景，大部分编辑器基于quill.js
+
+
+> 任务一：将源码clone到本地，然后运行起来
+
+# 源码解读
+
+## 安装和运行
+
+ 1. 执行\`npm i\`的时候，会自动执行packages/* 下面的npm i。因为有workspace字段。https://juejin.cn/post/6902312984358436878
+ 2. 根目录执行\`npm run start\` ，会启动两个端口，可以思考分别是干什么的？
+ 3. \`npm run build:quill  -w\` 就是过滤的意思 [https://docs.npmjs.com/cli/v10/commands/npm-run-script]()
+
+
+\`\`\`json
+  "scripts": {
+    "build": "run-p build:*",
+    "build:quill": "npm run build -w quill",
+    "build:website": "npm run build -w website",
+    "start": "run-p start:*",
+    "start:quill": "npm start -w quill",
+    "start:website": "NEXT_PUBLIC_LOCAL_QUILL=true npm start -w website",
+    "lint": "npm run lint -ws"
+  },
+\`\`\`
+
+ * 查看webpack配置 https://github.com/quilljs/webpack-example 一个简单的配置仓库
+![23](https://inews.gtimg.com/newsapp_bt/0/15822349471/0)
+## typescript相关
+![12](//volcengine-kdocs-cache.wpscdn.cn/kdocs/img/logo.5c78b00f.svg)
+
+1. 
+
+
+*/
+
+
+</script>
+</html>
