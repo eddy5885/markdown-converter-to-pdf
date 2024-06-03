@@ -127,10 +127,20 @@ export async function exportPDF(context: string, fileName?: PDFFileName) {
       imagesObj[src] = src;
     }
   });
+
+  const promises: Promise<void>[] = [];
+
   for (let i in imagesObj) {
-    const base64 = await convertImageToBase64(i);
-    imagesObj[i] = base64;
+    // 将每个转换任务添加到 Promise 数组中
+    promises.push(
+      convertImageToBase64(i).then((base64) => {
+        imagesObj[i] = base64;
+      })
+    );
   }
+
+  await Promise.all(promises);
+
   tempElement.innerHTML = tempElement.innerHTML.replace(
     /<img[^>]*>/gi,
     function (match, capture) {
