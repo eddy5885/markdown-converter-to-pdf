@@ -1,10 +1,13 @@
 {
   "name": "markdown-to-pdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/cjs/index.js.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && tsc --project tsconfig.json && tsc --project tsconfig.cjs.json"  
   },
   "keywords": [],
   "author": "",
@@ -12,5 +15,8 @@
   "dependencies": {
     "html2pdf.js": "^0.10.1",
     "marked": "^12.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
   }
 }

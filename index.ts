@@ -2,7 +2,7 @@ import { marked } from "marked";
 
 import html2pdf from "html2pdf.js";
 
-function convertImageToBase64(url) {
+function convertImageToBase64(url: string) {
   return new Promise((resolve, reject) => {
     // 1. 创建一个Image对象
     const image = new Image();
@@ -32,7 +32,10 @@ function convertImageToBase64(url) {
   });
 }
 
-export async function exportPDF(context, fileName) {
+type PDFFileName = `${string}.pdf` | '';  
+
+
+export async function exportPDF(context: string, fileName:PDFFileName) {
   const html = marked(context);
   // 添加外联样式
   const css = `  
@@ -56,7 +59,7 @@ export async function exportPDF(context, fileName) {
   const tempElement = document.createElement("div");
   tempElement.innerHTML = css + html;
   console.log(tempElement);
-  const tagsA = tempElement.getElementsByTagName("img");
+  const tagsA = tempElement.getElementsByTagName("img") as any;
   console.log(tagsA);
   const images = {};
   tagsA.forEach((item) => {
