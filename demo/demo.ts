@@ -6,8 +6,11 @@ const textarea = document.getElementsByTagName(
 
 const btn = document.getElementById("pdf") as HTMLButtonElement;
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", async () => {
   const context = textarea.value;
   console.log(transformToHTML(context));
-  exportPDF(context);
+  console.log('开始导出文件');
+  await exportPDF(context);
+  console.log('已完成导出文件');
+
 });
