@@ -1,4 +1,4 @@
-import { exportPDF,transformToHTML } from "../dist/esm/index.js";
+import { exportPDF,transformToHTML } from "markdown-to-pdf";
 
 const textarea = document.getElementsByTagName(
   "textarea"
