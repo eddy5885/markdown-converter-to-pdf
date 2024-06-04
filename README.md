@@ -6,6 +6,8 @@
 
 ## 使用方法Usage
 
+> npm install markdown-to-pdf
+
 参考demo目录下面案例
 ```html
     <div>
@@ -35,15 +37,21 @@ btn.addEventListener("click", async () => {
 
 ```
 ## API
+transformToHTML 和  exportPDF 类型定义
+```typescript
+export declare function transformToHTML(markdownString: string): string | Promise<string>;
+
+type PDFFileName = `${string}.pdf` | "";
+export declare function exportPDF(context: string, fileName?: PDFFileName): Promise<void>;
+
+```
 1. 将markdown文本转换为html
 
 ```typescript
-function transformToHTML(markdownString: string): string | Promise<string>;
 
 import { transformToHTML } from "markdown-to-pdf";
 
 const html = transformToHTML(markdownStr)
-
 
 ```
 2. 将markdown文本转换为pdf，并导出
