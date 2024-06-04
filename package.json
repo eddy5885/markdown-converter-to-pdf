@@ -1,25 +1,23 @@
 {
-  "name": "markdown-to-pdf",
+  "name": "markdown-converter-to-pdf",
   "version": "1.0.1",
   "description": "A simple markdown to pdf converter",
   "keywords": [
     "markdown",
     "pdf",
-    "markdown-to-pdf"
+    "markdown-to-pdf",
+    "markdown-converter-to-pdf"
   ],
   "files": [
-    "dist/",
-    "assets/*.less",
-    "es",
-    "lib"
+    "dist/"
   ],
-  "homepage": "https://github.com/eddy5885/markdown-to-pdf",
+  "homepage": "https://github.com/eddy5885/markdown-converter-to-pdf",
   "repository": {
     "type": "git",
-    "url": "git@github.com:eddy5885/markdown-to-pdf.git"
+    "url": "git@github.com:eddy5885/markdown-converter-to-pdf.git"
   },
   "bugs": {
-    "url": "https://github.com/eddy5885/markdown-to-pdf/issues"
+    "url": "https://github.com/eddy5885/markdown-converter-to-pdf/issues"
   },
   "main": "dist/cjs/index.js.js",
   "module": "dist/esm/index.js",

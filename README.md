@@ -2,11 +2,11 @@
 
 
 ## 体验地址 
-[https://eddy5885.github.io/markdown-to-pdf/](https://eddy5885.github.io/markdown-to-pdf/)
+[https://eddy5885.github.io/markdown-converter-to-pdf/](https://eddy5885.github.io/markdown-converter-to-pdf/)
 
 ## 使用方法Usage
 
-> npm install markdown-to-pdf
+> npm install markdown-converter-to-pdf
 
 参考demo目录下面案例
 ```html
@@ -19,7 +19,7 @@
 ```
 
 ```typescript
-import { exportPDF } from "markdown-to-pdf";
+import { exportPDF } from "markdown-converter-to-pdf";
 
 const textarea = document.getElementsByTagName(
   "textarea"
@@ -49,7 +49,7 @@ export declare function exportPDF(context: string, fileName?: PDFFileName): Prom
 
 ```typescript
 
-import { transformToHTML } from "markdown-to-pdf";
+import { transformToHTML } from "markdown-converter-to-pdf";
 
 const html = transformToHTML(markdownStr)
 
@@ -61,7 +61,7 @@ type PDFFileName = `${string}.pdf` | "";
 
 function exportPDF(context: string, fileName?: PDFFileName): Promise<void>;
 
-import { exportPDF } from "markdown-to-pdf";
+import { exportPDF } from "markdown-converter-to-pdf";
 
 // 如果fileName为空，则默认从markdown文本中从前往后查找一级到六级标题到内容，最先找到的作为标题
 await exportPDF(markdownStr, 'React课件.pdf')

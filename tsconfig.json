@@ -7,7 +7,7 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "markdown-to-pdf": ["./index.ts"]
+      "markdown-converter-to-pdf": ["./index.ts"]
     },
   },  
   "include": ["**/*.ts"],  

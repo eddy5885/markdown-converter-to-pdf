@@ -1,4 +1,4 @@
-import { exportPDF,transformToHTML } from "markdown-to-pdf";
+import { exportPDF,transformToHTML } from "markdown-converter-to-pdf";
 
 const textarea = document.getElementsByTagName(
   "textarea"
