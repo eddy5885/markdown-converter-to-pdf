@@ -121,7 +121,7 @@ export async function exportPDF(context: string, fileName?: PDFFileName) {
     "img"
   ) as HTMLCollectionOf<HTMLImageElement>;
   const imagesObj = {};
-  [...imageTags].map((item) => {
+  [...imageTags].forEach((item) => {
     const src = item.getAttribute("src");
     if (src && !src.startsWith("data:image")) {
       imagesObj[src] = src;
