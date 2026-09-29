@@ -31,7 +31,6 @@
     "demo:deploy": "gh-pages -d demo/dist",
     "gh-pages": "npm run demo:build && npm run demo:deploy"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
